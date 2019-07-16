@@ -17,7 +17,7 @@ $query = "INSERT INTO peminjaman(nama_buku, nama_peminjam, tanggal_pinjam, tangg
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Perpustakaan | Add Pinjaman</title>
+    <title>Perpustakaan | Tambah Pinjaman</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -142,10 +142,11 @@ $query = "INSERT INTO peminjaman(nama_buku, nama_peminjam, tanggal_pinjam, tangg
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                Input Data Buku
+                Input Data Peminjaman
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Input Peminjaman</li>
 
             </ol>
         </section>
@@ -156,7 +157,7 @@ $query = "INSERT INTO peminjaman(nama_buku, nama_peminjam, tanggal_pinjam, tangg
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-header">
-                            <h3 class="box-title">Input Data Buku</h3>
+                            <h3 class="box-title">Input Data Peminjaman Buku</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -168,18 +169,18 @@ $query = "INSERT INTO peminjaman(nama_buku, nama_peminjam, tanggal_pinjam, tangg
                                 <div class="form-group">
                                     <label for="nama-peminjam">Nama Peminjam</label>
                                     <input type="text" class="form-control" id="nama-peminjam" required name="namapeminjam"
-                                           placeholder="Jenis Buku">
+                                           placeholder="Nama Peminjam">
                                 </div>
                                 <div class="form-group">
                                     <label>Tanggal Peminjaman:</label>
-                                        <input type="text" class="form-control " required id="datepicker" placeholder="dd-mm-yyyy" name="tanggalpinjam">
+                                        <input type="text" class="form-control " required id="datepicker" placeholder="mm/dd/yyyy" name="tanggalpinjam">
                                     <!-- /.input group -->
                                 </div>
 
 
                                 <div class="form-group">
                                     <label>Tanggal Pengembalian:</label>
-                                    <input type="text" class="form-control " id="datepicker2" required placeholder="dd-mm-yyyy" name="tanggalkembali">
+                                    <input type="text" class="form-control " id="datepicker2" required placeholder="mm/dd/yyyy" name="tanggalkembali">
                                     <!-- /.input group -->
                                 </div>
 

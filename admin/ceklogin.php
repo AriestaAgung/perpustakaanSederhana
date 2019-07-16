@@ -23,6 +23,6 @@ if ($cek > 0 ) {
     header("Location: index.php");
 
 } else if ($cek == 0) {
-    header("Location: ../login.php");
+    header("Location: ../index.php");
 }
 ?>

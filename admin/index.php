@@ -13,6 +13,11 @@ $queryDataPeminjaman = "SELECT * FROM peminjaman";
 $dataPeminjam = mysqli_query($conn, $queryDataPeminjaman);
 
 $namaUser = $_SESSION['nama'];
+if($namaUser == null){
+    header("Location: ../index.php");
+    $_POST['echo'] = "Silahkan Login terlebih Dahulu !";
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -159,7 +164,7 @@ $namaUser = $_SESSION['nama'];
                 Data Peminjaman Buku
             </h1>
             <ol class="breadcrumb">
-                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li><a href="#"><i class="fa fa-dashboard"></i> Data Peminjaman</a></li>
 
             </ol>
         </section>
@@ -177,13 +182,13 @@ $namaUser = $_SESSION['nama'];
                             <table id="example2" class="table table-bordered table-hover">
                                 <thead>
                                 <tr>
-                                    <th>No. </th>
+                                    <th class="text-center">No. </th>
 <!--                                    <th>ID Peminjaman.</th>-->
-                                    <th>Nama Buku</th>
-                                    <th>Nama Peminjam</th>
-                                    <th>Tanggal Pinjam</th>
-                                    <th>Tanggal Kembali</th>
-                                    <th>Aksi</th>
+                                    <th class="text-center">Nama Buku</th>
+                                    <th class="text-center">Nama Peminjam</th>
+                                    <th class="text-center">Tanggal Pinjam</th>
+                                    <th class="text-center">Tanggal Kembali</th>
+                                    <th class="text-center">Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -194,13 +199,13 @@ $namaUser = $_SESSION['nama'];
 
 
                                         echo "<tr>";
-                                        echo "<td>$i</td>";
+                                        echo "<td class='text-center'>$i</td>";
 //                                        echo "<td>".$rowpeminjaman['nomor']."</td>";
-                                        echo "<td>".$rowpeminjaman['nama_buku']."</td>";
-                                        echo "<td>".$rowpeminjaman['nama_peminjam']."</td>";
-                                        echo "<td>".$rowpeminjaman['tanggal_pinjam']."</td>";
-                                        echo "<td>".$rowpeminjaman['tanggal_kembali']."</td>";
-                                        echo "<td><a href='updatepeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."'>Edit</a> || <a href='hapuspeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."'>Hapus</a></td>";
+                                        echo "<td class='text-center'>".$rowpeminjaman['nama_buku']."</td>";
+                                        echo "<td class='text-center'>".$rowpeminjaman['nama_peminjam']."</td>";
+                                        echo "<td class='text-center'>".$rowpeminjaman['tanggal_pinjam']."</td>";
+                                        echo "<td class='text-center'>".$rowpeminjaman['tanggal_kembali']."</td>";
+                                        echo "<td class='text-center'><a href='updatepeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."'><button class='btn btn-primary'>Edit</button></a> <a href='hapuspeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."'><button class='btn btn-primary'>Hapus</button></a></td>";
                                         echo "</tr>";
                                         $i++;
                                     }

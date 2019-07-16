@@ -24,6 +24,14 @@ body {
     padding: 2rem;
 }
 
+#page-content {
+    flex: 1 0 auto;
+}
+
+#sticky-footer {
+    flex-shrink: none;
+}
+
 .form-signin {
     width: 100%;
 }

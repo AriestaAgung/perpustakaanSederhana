@@ -14,8 +14,7 @@ $namapeminjam = $_POST['namapeminjam'];
 $tanggalpinjam = $_POST['tanggalpinjam'];
 $tanggalkembali = $_POST['tanggalkembali'];
 
-$query = "INSERT INTO peminjaman(nama_buku, nama_peminjam, tanggal_pinjam, tanggal_kembali) values('$buku','$namapeminjam','$tanggalpinjam', '$tanggalkembali')";
+$query = "INSERT INTO peminjaman(nama_buku, nama_peminjam, tanggal_pinjam, tanggal_kembali) values('$buku','$namapeminjam','$tanggalpinjam','$tanggalkembali')";
 mysqli_query($conn, $query);
 header("Location: index.php");
 
-?>

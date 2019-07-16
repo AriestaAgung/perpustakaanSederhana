@@ -7,8 +7,9 @@
  */
 session_start();
 //    unset($_SESSION['nama']);
-//    $_SESSION['status'] = "logout";
+    $_SESSION['status'] = "logout";
     session_unset();
     session_destroy();
-    header("Location: ../login.php");
+
+    header("Location: ../index.php");
 ?>
