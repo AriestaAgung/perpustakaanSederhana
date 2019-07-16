@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 25, 2019 at 08:09 PM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.3.1
+-- Generation Time: Jul 16, 2019 at 11:36 AM
+-- Server version: 10.1.40-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -41,8 +41,7 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id_peminjaman`, `nama_peminjam`, `nama_buku`, `tanggal_pinjam`, `tanggal_kembali`) VALUES
-(1, 'Sarah', 'Senja di sore Har', '22-06-2019', '25-06-2019'),
-(2, 'Sarah', 'Sejna di sore Hari', '25-06-2019', '30-06-2019');
+(3, 'Sarah', 'Baca Buku ini di saat engkau lelah', '07/02/2019', '07/05/2019');
 
 -- --------------------------------------------------------
 
@@ -62,7 +61,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `nama`) VALUES
-(1, 'testing123', 'test', 'Sarah');
+(1, 'testing123', 'test', 'Ariesta');
 
 --
 -- Indexes for dumped tables
