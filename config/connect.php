@@ -9,7 +9,7 @@
 $host = 'localhost';
 $user = 'root';
 $pass = '';
-$db = 'uts';
+$db = 'uas';
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 

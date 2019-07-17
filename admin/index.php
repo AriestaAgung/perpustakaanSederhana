@@ -205,7 +205,9 @@ if($namaUser == null){
                                         echo "<td class='text-center'>".$rowpeminjaman['nama_peminjam']."</td>";
                                         echo "<td class='text-center'>".$rowpeminjaman['tanggal_pinjam']."</td>";
                                         echo "<td class='text-center'>".$rowpeminjaman['tanggal_kembali']."</td>";
-                                        echo "<td class='text-center'><a href='updatepeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."'><button class='btn btn-primary'>Edit</button></a> <a href='hapuspeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."'><button class='btn btn-primary'>Hapus</button></a></td>";
+                                        echo "<td class='text-center'><a href='updatepeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."'><button class='btn btn-primary'>Edit</button></a> <a href='hapuspeminjaman.php?id=".$rowpeminjaman['id_peminjaman']."' onclick=\"return confirm(' you want to delete?');\"><button class='btn btn-danger'>Hapus</button></a></td>";
+
+
                                         echo "</tr>";
                                         $i++;
                                     }
@@ -278,7 +280,19 @@ if($namaUser == null){
             'info'        : true,
             'autoWidth'   : false
         })
-    })
+    });
+
+
+    //$("#delete-button").click(function(){
+    //  if(confirm("Are you sure you want to delete this?")){
+    //            $("#delete-button").attr("href", '<?php //echo "hapuspeminjaman.php?id=" . $rowpeminjaman['id_peminjaman'] ?>//');
+    //            return true;
+    //        }
+    //        else{
+    //            return false;
+    //        }
+    //});
+
 </script>
 </body>
 </html>
